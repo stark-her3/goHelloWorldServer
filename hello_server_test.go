@@ -16,6 +16,17 @@ func TestGreetingSpecificDemo(t *testing.T) {
 	}
 }
 
+func TestDummy(t *testing.T) {
+	greeting := CreateGreeting("Dummy")
+	if greeting != "Dummy\n" {
+		t.Errorf("Greeting was incorrect, got: %s, want: %s.", greeting, "Hello, Demo\n")
+	}
+	x := 5
+	if x != (10-5) {
+		t.Errorf("want x: %v, got x: %v", 10-5, x)
+	}
+}
+
 // func TestShowFailure(t *testing.T) {
 // 	greeting := CreateGreeting("Demo1")
 // 	if greeting != "Hello, Demo\n" {
